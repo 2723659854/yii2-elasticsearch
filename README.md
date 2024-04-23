@@ -176,6 +176,7 @@ $result = $client->orSearch('index','_doc',['title','content'],'今天');
 
 ```
 #### 测试
+将本扩展包的phpunit.xml文件复制到项目的根目录下面然后执行下面的命令
 ```bash 
  php ./vendor/bin/phpunit -c phpunit.xml
 ```
