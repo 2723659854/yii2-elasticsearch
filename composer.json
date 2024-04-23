@@ -1,6 +1,6 @@
 {
-    "name": "xiaosongshu/elasticsearch",
-    "description": "\"elasticsearch 客户端\"",
+    "name": "xiaosongshu/yii2-elasticsearch",
+    "description": "\"elasticsearch client for YII2\"",
     "type": "library",
     "license": "mit",
     "autoload": {
@@ -14,16 +14,11 @@
             "email": "2723659854@qq.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {
         "php": ">=7.4.1",
-        "elasticsearch/elasticsearch": "7.17.1"
-    },
-    "repositories": {
-        "packagist": {
-            "type": "composer",
-            "url": "https://mirrors.aliyun.com/composer/"
-        }
+        "elasticsearch/elasticsearch": "7.17.1",
+        "yiisoft/yii2": "~2.0.45"
     },
     "require-dev": {
         "phpunit/phpunit": "9.6.x-dev"

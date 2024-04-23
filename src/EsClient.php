@@ -5,14 +5,13 @@ namespace Xiaosongshu\Elasticsearch;
 
 use Elasticsearch\Client;
 use Elasticsearch\ClientBuilder;
-
+use yii\base\Component;
 /**
- * elasticsearch 客户端
- * @purpose elasticsearch 客户端
+ * elasticsearch client
+ * @purpose elasticsearch client
  * @package ESClient
- * @example 此类可以当做模型的基类使用，需要把这个类里面的index和type分别改成$this->index和$this->type,然后创建新的模型继承这一个类，并在模型中设置index和type，nodes
  */
-class ESClient
+class ESClient extends Component
 {
 
     /**  @var Client $client php的elasticsearch客户端 */

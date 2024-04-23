@@ -1,42 +1,25 @@
-## elasticsearch 客户端
+##  elasticsearch-YII客户端 elasticsearch client for YII
 
-###安装方法
+### 安装 install
 ```bash 
-composer require xiaosongshu/elasticsearch
+composer require xiaosongshu/yii2-elasticsearch
 ```
-### 基本配置
- 支持thinkPHP，laravel，webman等常用框架，需要创建配置文件elasticsearch.php ，放到config/目录下。
- 配置内容如下所示：
- ```php 
- return [
-    /** 节点列表 */
-    'nodes' => ['127.0.0.1:9200'],
-    /** 用户名 */
-    'username'=>'',
-    /** 密码 */
-    'password'=>'',
-];
- ```
-###基本用法
-实例化客户端
-```php 
-$client = new \Xiaosongshu\Elasticsearch\ESClient();
+### 配置 Configuration
+ ```php
+
+'components' => [
+     'ESClient' => [
+            'class' => \Xiaosongshu\Elasticsearch\ESClient::class,
+            'node'=>['192.168.101.170:9200'],
+            'username' => '',
+            'password' => '',
+        ],
+]
 ```
-### 普通查询方法
-```php 
-$client = new \Xiaosongshu\Elasticsearch\ESClient();
-$result = $client->search(
-    'index',
-    '_doc',
-    'nickname',
-    'fool',
-    ['term' => ['userid' => 123]],
-    0,
-    10,
-    ['_id' => 'desc'], [
-    'hits.hits._source',
-    'hits.total',
-]);
+
+### 基本用法 example
+```php
+$res = Yii::$app->ESClient->search('index','_doc','title','测试')['hits']['hits'];
 ```
 ### 客户端支持的所有方法
 ~~~
