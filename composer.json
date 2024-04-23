@@ -22,5 +22,10 @@
     },
     "require-dev": {
         "phpunit/phpunit": "9.6.x-dev"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "php -r \"copy('vendor/xiaosongshu/yii2-elasticsearch/phpunit.xml', 'phpunit.xml');\""
+        ]
     }
 }

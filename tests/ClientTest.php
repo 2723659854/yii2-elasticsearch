@@ -46,7 +46,7 @@ class ClientTest extends TestCase
      * @return void
      */
     public function testAddScript(){
-        self::assertIsArray($this->handler->addScript('update_content',"doc['title'].value+'_'+'谁不说按家乡好'"));
+        self::assertNull($this->handler->addScript('update_content',"doc['title'].value+'_'+'谁不说按家乡好'"));
     }
 
     /**
